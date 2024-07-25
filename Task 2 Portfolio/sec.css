@@ -10,7 +10,7 @@ body {
     height: 100vh;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #cbc1d2;
+    background-color: #FAF5FF;
     color: #333;
     padding: 20px;
 }
@@ -34,7 +34,7 @@ nav {
 }
 
 nav a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -62,24 +62,25 @@ ul {
 }
 
 section {
-    background: #fff;
+    background: #674786;
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
 }
 
 section h1 {
     text-align: center;
-    color: #333;
+    color: white;
     font-family: 'Georgia', serif;
     font-size: 30px; 
     margin-bottom: 20px;
-    text-shadow: 1px 1px 0 red;
+    
 }
 
 section h3 {
-    color: #ff7043; 
+    color: white; 
     font-family: 'Georgia', serif;
     margin-top: 20px;
     font-size: 25px;
@@ -94,7 +95,7 @@ section h3 {
 }
 
 .projects a {
-    color: blue ;
+    color: white !important ;
     text-decoration:underline;
     font-weight: bold;
 }
@@ -203,43 +204,49 @@ section h3 {
 }
 
 .certifications li {
-    color: #ff7043; 
+    color: white; 
     font-family: 'Georgia', serif;
     margin-top: 20px;
     font-size: 25px;
 }
 
 .highlight {
-    color: #de481b; 
+    color: white; 
     font-family: 'Georgia', serif;
     margin-top: 20px;
     font-size: 23px;
 }
 
-.gallery {
+.gallery h2 {
     text-align: center;
-    color: #333;
+    color: white;
     font-family: 'Georgia', serif;
     font-size: 20px; 
     margin-bottom: 20px;
-    text-shadow: 1px 1px 0 red;
+ 
 }
 .calculator{
     text-align: center;
-    color: #333;
+}
+.calculator h2{
+    
+    color: white ;
     font-family: 'Georgia', serif;
     font-size: 20px; 
     margin-bottom: 20px;
-    text-shadow: 1px 1px 0 red;
+  
 
 }
-.weather {
+.weather{
     text-align: center;
-    color: #333;
+}
+.weather h2{
+    text-align: center;
+    color: white;
     font-family: 'Georgia', serif;
     font-size: 20px; 
     margin-bottom: 20px;
-    text-shadow: 1px 1px 0 red;
+  
 
 }
 
