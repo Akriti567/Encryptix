@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    background-color: #e1a1a1;
+    background-color: #cbc1d2;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -74,7 +74,6 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* background: url('me.jpg') no-repeat center center/cover; */
     color: white;
     position: relative;
     z-index: 1;
@@ -106,8 +105,8 @@ nav ul li a:hover {
 }
 
 .profile-section .button {
-    background-color: #d06262;
-    color: white;
+    background-color:white;
+    color: black;
     padding: 10px 20px;
     border-radius: 5px;
     margin: 10px;
@@ -120,7 +119,9 @@ nav ul li a:hover {
 }
 
 .profile-section .button.download-cv {
-    background-color: #d39a1d; /* Different color for Download CV button */
+    /* background-color: #d39a1d;  */
+    background-color: white;
+    color: black;
 }
 
 .profile-section .button.download-cv:hover {
@@ -180,16 +181,18 @@ nav ul li a:hover {
 
 .container{
     font-family: sans-serif;
-    text-shadow: 2px 2px 0 red;
+    
+   
 
 }
 section {
     padding: 20px 5%;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
     margin: 20px auto;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     max-width: 800px;
+    color: white;
 }
 
 section h1 {
@@ -209,7 +212,7 @@ section p, section ul {
 }
 
 .education h2, .skills h2, .contact h2 {
-    color: #ff7043; /* Changed section subtitle color */
+    color: #ff7043;
     font-family: 'Georgia', serif;
     margin-top: 20px;
 }
