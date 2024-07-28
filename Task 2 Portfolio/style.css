@@ -4,7 +4,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    /* color: #333; */
     display: grid;
     place-items: center;
 }
@@ -20,6 +20,9 @@ header {
     border: none; /* Remove any border */
     box-shadow: none; /* Remove box shadow */
     box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
 }
 
 .logo {
@@ -98,8 +101,8 @@ nav ul li a:hover {
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
-    margin: 10px;
-    transition: background-color 0.3s ease;
+    margin: 5px;
+    /* transition: background-color 0.3s ease; */
     text-decoration: none;
 }
 
@@ -169,12 +172,15 @@ nav ul li a:hover {
 }
 
 section {
-    padding: 40px 10%; /* Increased padding for more space inside the section */
-    background-color: #674786;
-    margin: 40px auto; /* Adjusted margin to keep the section centered */
+    margin: 20px 0;
+    padding: 20px;
     border-radius: 10px;
+    /* padding: 40px 10%; */
+    background-color: #674786;
+    /* margin: 40px auto;  */
+
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 1200px; /* Increased max-width for a bigger section */
+    max-width: 1200px; 
     color: white;
 }
 
@@ -182,15 +188,15 @@ section h1 {
     text-align: center;
     color: white;
     font-family: 'Georgia', serif;
-    font-size: 32px; /* Increased font size for better readability */
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
 section p, section ul {
-    font-size: 18px; /* Increased font size for better readability */
-    line-height: 1.8; /* Increased line height for better readability */
+    font-size: 18px; 
+    line-height: 1.8; 
     word-spacing: 1.5px;
-    margin-bottom: 20px; /* Added margin to create space between paragraphs and lists */
+    margin-bottom: 20px; 
 }
 
 section ul {
@@ -207,12 +213,12 @@ section ul li {
     margin-top: 20px;
 }
 
-.skills ul, .Hobbies ul, .contact ul {
+.skills ul, .contact ul {
     list-style-type: none;
     padding: 0;
 }
 
-.skills ul li, .Hobbies ul li, .contact ul li {
+.skills ul li, .contact ul li {
     margin-bottom: 10px;
 }
 
@@ -224,6 +230,235 @@ section ul li {
 .contact ul li a {
     text-decoration: none;
     color: white;
+}
+.Projects {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Center the project boxes */
+    text-align: center;
+}
+.Projects h1 {
+    width: 100%; /* Make sure the title takes up the full width */
+    margin-bottom: 20px; /* Add space between the title and the project boxes */
+    font-size: 32px; /* Font size for the title */
+}
+
+.Projects .project-box {
+    flex: 1 1 calc(33.333% - 40px); /* 3 columns layout */
+    max-width: calc(33.333% - 40px); /* Ensure they don't get too wide */
+    background-color: #C8B7DA;
+    padding: 20px; /* Reduced padding for smaller boxes */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: black;
+    margin: 10px; /* Margin for better spacing */
+    max-height: 400px; /* Fixed height for project boxes */
+    overflow-y: auto; /* Add vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Projects .project-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.Projects .project-box h3 {
+    font-size: 20px; /* Smaller font size for titles */
+    margin-bottom: 10px; /* Less margin for tighter spacing */
+    
+}
+
+.Projects .project-box p {
+    font-size: 16px; /* Smaller font size for descriptions */
+    margin-bottom: 10px;
+}
+
+.Projects .project-box ul {
+    padding-left: 20px;
+    font-size: 14px; /* Smaller font size for list items */
+}
+
+.Projects .project-box li {
+    margin-bottom: 5px; /* Less margin for tighter spacing */
+}
+
+.Projects .project-box a {
+    color: black!important;
+    text-decoration: underline;
+    font-weight: bold;
+    display: block; /* Ensure the link takes up the full width */
+    margin-top: 10px; /* Add some margin for spacing */
+    word-break: break-all; /* Break long URLs to fit inside the box */
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .Projects .project-box {
+        flex: 1 1 calc(50% - 40px); /* 2 columns layout for tablets */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .Projects .project-box {
+        flex: 1 1 calc(50% - 40px); /* 2 columns layout for tablets */
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Projects .project-box {
+        flex: 1 1 100%; /* Single column layout for mobiles */
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+.gallery {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.gallery .image-gallery {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.gallery .image-gallery .pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.gallery .image-gallery .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Adjust object-fit as needed: contain or cover */
+    border-radius: 10px;
+}
+
+@keyframes slideshow {
+    0%, 3.846% { opacity: 1; }
+    7.692%, 100% { opacity: 0; }
+}
+
+.gallery .image-gallery .pic:nth-child(1) {
+    animation: slideshow 65s infinite;
+    animation-delay: 0s;
+}
+
+.gallery .image-gallery .pic:nth-child(2) {
+    animation: slideshow 65s infinite;
+    animation-delay: 5s;
+}
+
+.gallery .image-gallery .pic:nth-child(3) {
+    animation: slideshow 65s infinite;
+    animation-delay: 10s;
+}
+
+.gallery .image-gallery .pic:nth-child(4) {
+    animation: slideshow 65s infinite;
+    animation-delay: 15s;
+}
+
+.gallery .image-gallery .pic:nth-child(5) {
+    animation: slideshow 65s infinite;
+    animation-delay: 20s;
+}
+
+.gallery .image-gallery .pic:nth-child(6) {
+    animation: slideshow 65s infinite;
+    animation-delay: 25s;
+}
+
+.gallery .image-gallery .pic:nth-child(7) {
+    animation: slideshow 65s infinite;
+    animation-delay: 30s;
+}
+
+.gallery .image-gallery .pic:nth-child(8) {
+    animation: slideshow 65s infinite;
+    animation-delay: 35s;
+}
+
+.gallery .image-gallery .pic:nth-child(9) {
+    animation: slideshow 65s infinite;
+    animation-delay: 40s;
+}
+
+.gallery .image-gallery .pic:nth-child(10) {
+    animation: slideshow 65s infinite;
+    animation-delay: 45s;
+}
+
+.gallery .image-gallery .pic:nth-child(11) {
+    animation: slideshow 65s infinite;
+    animation-delay: 50s;
+}
+
+.gallery .image-gallery .pic:nth-child(12) {
+    animation: slideshow 65s infinite;
+    animation-delay: 55s;
+}
+
+.gallery .image-gallery .pic:nth-child(13) {
+    animation: slideshow 65s infinite;
+    animation-delay: 60s;
+}
+.highlight {
+    color: black; 
+    font-family: 'Georgia', serif;
+    margin-top: 20px;
+    font-size: 23px;
+}
+
+.gallery h2 {
+    text-align: center;
+    color: black;
+    font-family: 'Georgia', serif;
+    font-size: 20px; 
+    margin-bottom: 20px;
+ 
+}
+.calculator{
+    text-align: center;
+}
+.calculator h2{
+    
+    color: black ;
+    font-family: 'Georgia', serif;
+    font-size: 20px; 
+    margin-bottom: 20px;
+  
+
+}
+.weather{
+    text-align: center;
+}
+.weather h2{
+    text-align: center;
+    color: black;
+    font-family: 'Georgia', serif;
+    font-size: 20px; 
+    margin-bottom: 20px;
+  
+
 }
 
 form {
@@ -272,61 +507,37 @@ footer {
     background-color: #232121;
     color: white;
     margin-top: 20px;
-    border-top: 5px solid; /* Changed footer top border color */
+    border-top: 5px solid; 
 }
 
-/* Media Queries */
-@media screen and (max-width: 768px) {
-    header {
-        padding: 20px 10px; /* Adjusted padding for smaller screens */
-    }
 
+  @media screen and (min-width:769px) and (max-width:1024px){
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+}
+
+/* for tablets */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
     .logo img {
-        width: 60px; /* Smaller logo size for smaller screens */
+        width: 150px; /* Adjusted logo size for tablets */
     }
+}
 
-    nav ul {
-        gap: 15px; /* Further reduced gap for smaller screens */
+/* for mobiles */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    img {
+        max-width: 100%;
+        height: auto;
     }
-
-    nav ul li a {
-        font-size: 16px; /* Smaller font size for smaller screens */
-    }
-
-    .hero img {
-        width: 150px; /* Adjusted hero image size for smaller screens */
-        height: 150px; /* Adjusted hero image size for smaller screens */
-    }
-
-    .social a {
-        width: 25px; /* Smaller icon size for smaller screens */
-        height: 25px; /* Smaller icon size for smaller screens */
-        font-size: 16px; /* Smaller font size for smaller screens */
-    }
-
-    section {
-        padding: 20px; /* Reduced padding for smaller screens */
-        max-width: 95%; /* Adjusted max-width for smaller screens */
-    }
-
-    section h1 {
-        font-size: 24px; /* Adjusted font size for smaller screens */
-    }
-
-    section p, section ul {
-        font-size: 16px; /* Adjusted font size for smaller screens */
-    }
-
-    form input, form textarea {
-        font-size: 12px; /* Smaller font size for smaller screens */
-    }
-
-    form textarea {
-        height: 100px; /* Adjusted height for smaller screens */
-    }
-
-    form button {
-        padding: 10px; /* Adjusted padding for smaller screens */
-        font-size: 14px; /* Smaller font size for smaller screens */
+    .logo img {
+        width: 120px; 
+        display: block; 
     }
 }
